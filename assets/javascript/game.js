@@ -51,14 +51,21 @@ $(document).ready(function () {
             for (var i = 0; i < animalGif.length; i++) {
                 console.log(animalGif[i].rating)
                 // Creating and storing a div tag
-                var gifArea = $("<div>");
+                var gifArea = $("<div class='inlineBlock'>");
 
                 // Creating a paragraph tag with the result item's rating
                 var p = $("<p>").text("Rating: " + animalGif[i].rating);
 
+                // Creating and storing an image tag
+                var animalImage = $("<img>");
+                // Setting the src attribute of the image to a property pulled off the result item
+                animalImage.attr("src", animalGif[i].images.fixed_height.url);
 
+                // Appending the paragraph and image tag to the animalDiv
+                gifArea.append(p);
+                gifArea.append(animalImage);
 
-
+                $("#display-view").prepend(gifArea);
             }
         });
     }

@@ -9,3 +9,8 @@ body {
 button {
   margin: 8px;
 }
+
+.inlineBlock {
+  display: inline-block;
+  margin: 20px;
+}
