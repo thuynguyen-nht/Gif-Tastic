@@ -38,7 +38,7 @@ $(document).ready(function () {
     function displayGif() {
         var animalDisplay = $(this).attr("data-name");
 
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animalDisplay + "&api_key=4MpjWrAM3wf0qX6G6dbnCaxyWlDJPuHq&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animalDisplay + "&api_key=4MpjWrAM3wf0qX6G6dbnCaxyWlDJPuHq&limit=10";
 
         // Creating an AJAX call for the specific movie button being clicked
         $.ajax({
