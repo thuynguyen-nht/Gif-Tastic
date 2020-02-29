@@ -73,23 +73,19 @@ $(document).ready(function () {
         });
 
     }
-    $(document).click(function () {
-        var theClass = $(this).attr();
-        console.log(theClass);
-    })
 
-    $(".inlineBlock").on("click", "a", function () {
+    $(document).on("click", ".gif", function () {
         console.log("I am working")
-        // var state = $(this).attr("data-state");
-        // console.log(state, "origin");
-        // console.log("this", this);
-        // if (state === "still") {
-        //     $(this).attr("src", $(this).attr("data-animate"));
-        //     $(this).attr("data-state", "animate")
-        // } else {
-        //     $(this).attr("src", $(this).attr("data-still"));
-        //     $(this).attr("data-state", "still")
-        // }
+
+        var state = $(this).attr("data-state");
+
+        if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate")
+        } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still")
+        }
 
     });
 
