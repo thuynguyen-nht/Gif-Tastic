@@ -57,9 +57,12 @@ $(document).ready(function () {
                 var p = $("<p>").text("Rating: " + animalGif[i].rating);
 
                 // Creating and storing an image tag
-                var animalImage = $("<img>");
+                var animalImage = $("<img class='gif'>");
                 // Setting the src attribute of the image to a property pulled off the result item
-                animalImage.attr("src", animalGif[i].images.fixed_height.url);
+                animalImage.attr("src", animalGif[i].images.fixed_height_still.url)
+                animalImage.attr("data-still", animalGif[i].images.fixed_height_still.url)
+                animalImage.attr("data-animate", animalGif[i].images.fixed_height.url)
+                animalImage.attr("data-state", "still");
 
                 // Appending the paragraph and image tag to the animalDiv
                 gifArea.append(p);
@@ -68,10 +71,27 @@ $(document).ready(function () {
                 $("#display-view").prepend(gifArea);
             }
         });
+
     }
+    $(document).click(function () {
+        var theClass = $(this).attr();
+        console.log(theClass);
+    })
 
+    $(".inlineBlock").on("click", "a", function () {
+        console.log("I am working")
+        // var state = $(this).attr("data-state");
+        // console.log(state, "origin");
+        // console.log("this", this);
+        // if (state === "still") {
+        //     $(this).attr("src", $(this).attr("data-animate"));
+        //     $(this).attr("data-state", "animate")
+        // } else {
+        //     $(this).attr("src", $(this).attr("data-still"));
+        //     $(this).attr("data-state", "still")
+        // }
 
-
+    });
 
     //GAME RUN=============
     $(document).on("click", ".animal", displayGif);
