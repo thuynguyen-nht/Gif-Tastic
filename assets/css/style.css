@@ -8,6 +8,7 @@ body {
 
 button {
   margin: 8px;
+  background-color: rgb(232, 226, 150);
 }
 
 .inlineBlock {
