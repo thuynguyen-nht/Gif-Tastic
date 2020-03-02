@@ -26,7 +26,7 @@ $(document).ready(function () {
     $("#add-animal").on("click", function (event) {
         event.preventDefault();
 
-        var inputAnimal = $("#search-input").val().trim();
+        var inputAnimal = $("#search-input").val().toLowerCase().trim();
 
         //push to the array
         animalLists.push(inputAnimal);
