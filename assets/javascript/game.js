@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    //animate
+
+
+
+
     //Global Variables==================
     var animalLists = ["birds", "bear", "mammal", "fish", "cat", "turtle", "wolf", "squirrel", "owl"];
 

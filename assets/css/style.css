@@ -1,5 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #F0DED6;
+  /* background-color: #F0DED6; */
+
+  background-image: linear-gradient(to bottom right, #CF91FF, #A259D9);
+  min-height: 100%;
   color: #f3f3f6;
   font-family: 'Fredoka One', ;
   font-size: 30px;
@@ -14,4 +21,60 @@ button {
 .inlineBlock {
   display: inline-block;
   margin: 20px;
+}
+
+header {
+  background-color: #9649B3;
+  font-family: 'Yellowtail', cursive;
+  color: #FFE09C;
+  text-align: center;
+  border-radius: 20px;
+  height: 150px;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 800;
+  font-size: vw;
+  font-stretch: extra-expanded;
+  position: relative;
+  width: fit-content;
+  animation-name: slideLeftRight;
+  animation-duration: 5s;
+  margin: 0 auto;
+  border-radius: 20px;
+
+}
+
+@keyframes slideLeftRight {
+
+  0% {
+    color: #FFE09C;
+    left: 0;
+
+  }
+
+  25% {
+    color: #FFCCAE;
+    left: 33%;
+
+  }
+
+  50% {
+    color: #FFB0AE;
+    left: 0%;
+
+  }
+
+  50% {
+    color: #FF9AAE;
+    left: -33%;
+
+  }
+
+  100% {
+    color: #FFE09C;
+    left: 0%;
+
+  }
 }
