@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-    //animate
-
-
-
 
     //Global Variables==================
     var animalLists = ["birds", "bear", "mammal", "fish", "cat", "turtle", "wolf", "squirrel", "owl"];
@@ -63,7 +59,7 @@ $(document).ready(function () {
                 var p = $("<p>").text("Rating: " + animalGif[i].rating);
 
                 // Creating and storing an image tag
-                var animalImage = $("<img class='gif'>");
+                var animalImage = $("<img class='gif img-fluid'>");
                 // Setting the src attribute of the image to a property pulled off the result item
                 animalImage.attr("src", animalGif[i].images.fixed_height_still.url)
                 animalImage.attr("data-still", animalGif[i].images.fixed_height_still.url)
