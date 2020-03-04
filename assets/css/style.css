@@ -35,7 +35,7 @@ header {
 h1 {
   font-size: 100px;
   font-weight: 800;
-  font-size: vw;
+  /* font-size: 10vw; */
   font-stretch: extra-expanded;
   position: relative;
   width: fit-content;
@@ -78,3 +78,68 @@ h1 {
 
   }
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 640px) {
+  #slidingHeader {
+    font-size: 50px;
+    font-weight: 800;
+    /* font-size: 10vw; */
+    font-stretch: extra-expanded;
+    position: relative;
+    width: fit-content;
+    animation-name: slideLeftRight;
+    animation-duration: 5s;
+    margin: 0 auto;
+    border-radius: 20px;
+
+  }
+
+  @keyframes slideLeftRight {
+
+    0% {
+      color: #FFE09C;
+      left: 0;
+
+    }
+
+    25% {
+      color: #FFCCAE;
+      left: 5%;
+
+    }
+
+    50% {
+      color: #FFB0AE;
+      left: 0%;
+
+    }
+
+    50% {
+      color: #FF9AAE;
+      left: -5%;
+
+    }
+
+    100% {
+      color: #FFE09C;
+      left: 0%;
+
+    }
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+  ...
+} */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+  ...
+} */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+  ...
+} */
