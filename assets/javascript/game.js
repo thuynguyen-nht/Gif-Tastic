@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     //Global Variables==================
-    var animalLists = ["birds", "bear", "mammal", "fish", "cat", "turtle", "wolf", "squirrel", "owl"];
+    var animalLists = ["bird", "bear", "fish", "cat", "turtle", "wolf", "squirrel", "owl"];
 
     //1. Add the button to the DOM
     function buttonRendering() {
@@ -30,10 +30,27 @@ $(document).ready(function () {
 
         var inputAnimal = $("#search-input").val().toLowerCase().trim();
 
-        //push to the array
-        animalLists.push(inputAnimal);
+        console.log(inputAnimal)
 
-        buttonRendering();
+        var check = false;
+        if (animalLists.indexOf(inputAnimal) !== -1) {
+
+            alert("Exist")
+            check = false;
+            console.log(check)
+            $("#search-input").val("");
+        } else {
+            check = true;
+            console.log(check)
+        }
+        if (check) {
+
+            //push to the array
+            animalLists.push(inputAnimal);
+
+            buttonRendering();
+            $("#search-input").val("");
+        }
     })
 
     //3. get the gif from Giphy

@@ -40,6 +40,10 @@ button:active {
   border: none;
 }
 
+img {
+  min-width: 350px;
+  max-height: 300px;
+}
 
 .rotate-in-center {
   -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -157,6 +161,11 @@ h1 {
 
   }
 
+  img {
+    width: auto;
+    min-width: 0;
+  }
+
   @keyframes slideLeftRight {
 
     0% {
@@ -192,6 +201,7 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+
 
   @keyframes slideLeftRight {
 
